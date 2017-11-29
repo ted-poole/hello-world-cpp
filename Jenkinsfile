@@ -6,12 +6,12 @@ pipeline {
    }
 
    stages {
-      stage('Build ${IMAGE_NAME}') {
+      stage('Build ' + ${IMAGE_NAME}) {
          steps {
             sh 'docker build -t ${IMAGE_NAME} .'
          }
       }
-      stage('Push ${IMAGE_NAME}') {
+      stage('Push ' + ${IMAGE_NAME}) {
          steps {
             sh 'docker push ${IMAGE_NAME}'
          }
