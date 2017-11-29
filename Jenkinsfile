@@ -2,7 +2,7 @@ pipeline {
    agent { label 'docker' }
 
    environment {
-       IMAGE_NAME="${JOB_NAME}:${BRANCH_NAME}"
+       IMAGE_NAME="${JOB_NAME.replace('/',':')}"
    }
 
    stages {
