@@ -5,5 +5,5 @@ RUN make
 
 FROM adlinktech/vortex-edge-cpp-run:latest
 COPY --from=builder /src/hello .
-ENTRYPOINT /hello
+CMD /hello
 

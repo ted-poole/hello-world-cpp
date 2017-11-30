@@ -1,7 +1,6 @@
 pipeline {
    agent { label 'docker' }
 
-   // Trigger this build if any of our base images get rebuilt (assuming latest tag)
    triggers {
        upstream(upstreamProjects: 'services-base/latest', threshold: hudson.model.Result.SUCCESS)
    }
